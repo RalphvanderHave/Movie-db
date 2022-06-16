@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+before_script:
+  - rm -rf build
+  - npm install
+
+pages: 
+  image: node:latest
+  stage: deploy
+  variables: 
+    NODE_ENV: production
+    PUBLIC_URL: /dt-webapplications/wa-2122-s4/intervisiegroepen/groep-5/featherweightheroes
+    
+  script: 
+    - echo 'Installing Node dependencies'
+    - npm ci
+    - echo 'Building the app'
+    - npm run build
+    - echo 'Not necessary, but helps with https://medium.com/@pshrmn/demystifying-single-page-applications-3068d0555d46'
+    - cp public/index.html public/404.html
+    - echo 'Making a backup of the public directory'
+    - mv public public-react
+    - echo 'Move the build directory to a new newly named public directory'
+    - mv build public
+    - echo 'Done building!'
+    - ls -al
+
+  artifacts:
+    paths:
+      - public
+
+  only:
+    - master
+   

@@ -1,0 +1,303 @@
+{
+	"id": "3e3c226e-c70a-48da-99f5-db3ead178581",
+	"name": "FeatherWeightHeroes",
+	"timestamp": "2022-04-24T19:11:07.260Z",
+	"collection_id": "19947940-7afc5961-acff-479f-8f5b-ca7d76a7b745",
+	"folder_id": 0,
+	"environment_id": "19947940-e432adab-c018-4be8-87d4-44997b204e07",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f376ead5-fcca-4e5f-9659-b742116bfd26",
+			"name": "GET ~/admin/check",
+			"url": "http://localhost:3000/admin/check",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"GET localhost:3000/admin/check ==> Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"GET localhost:3000/admin/check ==> Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"GET localhost:3000/admin/check ==> Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "508929d2-1b85-4b29-b6c8-636927f399b3",
+			"name": "POST ~/admin/init",
+			"url": "http://localhost:3000/admin/init",
+			"time": 716,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"POST localhost:3000/ ==> Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"POST localhost:3000/ ==> Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				716
+			],
+			"allTests": [
+				{
+					"POST localhost:3000/ ==> Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "9077bf0f-b7a2-4964-a916-3f16ce616b6e",
+			"name": "GET ~/users -> 0 users",
+			"url": "http://localhost:3000/users",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"GET localhost:3000/users ==> Received 0 users": true
+			},
+			"testPassFailCounts": {
+				"GET localhost:3000/users ==> Received 0 users": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"GET localhost:3000/users ==> Received 0 users": true
+				}
+			]
+		},
+		{
+			"id": "de7cf333-11c3-41f2-930a-8b61749a31db",
+			"name": "POST ~/users (id=1)",
+			"url": "http://localhost:3000/users",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"POST localhost:3000/user/1 ==> name: lennyh": true
+			},
+			"testPassFailCounts": {
+				"POST localhost:3000/user/1 ==> name: lennyh": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"POST localhost:3000/user/1 ==> name: lennyh": true
+				}
+			]
+		},
+		{
+			"id": "968039f6-d308-4303-ab79-fa9f8aa2a069",
+			"name": "GET ~/users/1 (username = lennyh)",
+			"url": "http://localhost:3000/users/1",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User 1 is lennyh": true
+			},
+			"testPassFailCounts": {
+				"User 1 is lennyh": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"User 1 is lennyh": true
+				}
+			]
+		},
+		{
+			"id": "4a0f1c86-9a03-4a19-ad97-b3543eb8c3ec",
+			"name": "GET non existing object",
+			"url": "http://localhost:3000/users/99",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User does not exist": true
+			},
+			"testPassFailCounts": {
+				"User does not exist": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"User does not exist": true
+				}
+			]
+		},
+		{
+			"id": "a6634f11-1d70-4146-a730-7bbcb9e6e6e0",
+			"name": "DELETE ~/users/1",
+			"url": "http://localhost:3000/users/1",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"User was deleted": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User was deleted": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"User was deleted": true
+				}
+			]
+		},
+		{
+			"id": "e79fea09-18f4-42d9-9903-596a9248d3ff",
+			"name": "POST ~/users -> id = 2",
+			"url": "http://localhost:3000/users",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User 1 is lennyh": true
+			},
+			"testPassFailCounts": {
+				"User 1 is lennyh": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"User 1 is lennyh": true
+				}
+			]
+		},
+		{
+			"id": "6b90e289-f34f-46de-b733-b105711fff53",
+			"name": "PUT ~/users/2 (username changed to ralph)",
+			"url": "http://localhost:3000/users/2",
+			"time": 56,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"User 2's name is updated to 'ralph'": true
+			},
+			"testPassFailCounts": {
+				"User 2's name is updated to 'ralph'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"User 2's name is updated to 'ralph'": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1146,
+	"collection": {
+		"requests": [
+			{
+				"id": "f376ead5-fcca-4e5f-9659-b742116bfd26",
+				"method": "GET"
+			},
+			{
+				"id": "508929d2-1b85-4b29-b6c8-636927f399b3",
+				"method": "POST"
+			},
+			{
+				"id": "9077bf0f-b7a2-4964-a916-3f16ce616b6e",
+				"method": "GET"
+			},
+			{
+				"id": "de7cf333-11c3-41f2-930a-8b61749a31db",
+				"method": "POST"
+			},
+			{
+				"id": "968039f6-d308-4303-ab79-fa9f8aa2a069",
+				"method": "GET"
+			},
+			{
+				"id": "4a0f1c86-9a03-4a19-ad97-b3543eb8c3ec",
+				"method": "GET"
+			},
+			{
+				"id": "a6634f11-1d70-4146-a730-7bbcb9e6e6e0",
+				"method": "DELETE"
+			},
+			{
+				"id": "e79fea09-18f4-42d9-9903-596a9248d3ff",
+				"method": "POST"
+			},
+			{
+				"id": "6b90e289-f34f-46de-b733-b105711fff53",
+				"method": "PUT"
+			}
+		]
+	}
+}

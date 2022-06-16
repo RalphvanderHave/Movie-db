@@ -1,0 +1,4 @@
+DB_USERNAME=fwh_user
+DB_PASSWORD=kipduif123!
+DB_DATABASE=fwh_db
+DB_HOST=featherweightheroes.mysql.database.azure.com
